@@ -1,4 +1,8 @@
-
+# Student Name: Oliver Wuttke
+# Student FAN: WUTT0019
+# File: lab2_exercises.py
+# Date: 07-08-2026
+# Description: Python file of the lab 2 exercises, mirrors the notebook
 
 import os
 
