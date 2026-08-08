@@ -102,3 +102,9 @@ grid_search.fit(X_train, y_train)
 
 print("Best Hyper-parameters: ", grid_search.best_params_)
 print("Best Score: ", grid_search.best_score_)
+
+# See test set accuracy
+gs_predict = grid_search.predict(X_test)
+gs_accuracy = accuracy_score(y_test, gs_predict)
+
+print(f"Grid Search Cross-Validation Accuracy: {gs_accuracy:.2f}")
