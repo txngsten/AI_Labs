@@ -6,7 +6,7 @@ from ucimlrepo import fetch_ucirepo
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import log_loss, average_precision_score, PrecisionRecallDisplay
+from sklearn.metrics import log_loss, PrecisionRecallDisplay
 
 # Import wine dataset
 wine = fetch_ucirepo(id=186)
