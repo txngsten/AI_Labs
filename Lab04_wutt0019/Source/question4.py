@@ -15,11 +15,9 @@ X = wine.data.features
 y = (wine.data.targets.values.ravel() >= 7).astype(int)   # ~20% positive
 
 # Train test split
-X_train, X_test, y_train, y_test = train_test_split(X,
-                                                    y,
-                                                    stratify=y,
-                                                    test_size=0.2,
-                                                    random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, stratify=y, test_size=0.2, random_state=42
+)
 
 # Scaling features
 scaler = StandardScaler()

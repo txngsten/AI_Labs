@@ -16,11 +16,9 @@ X = ionosphere.data.features
 y = (ionosphere.data.targets.values.ravel() == 'g').astype(int)
 
 # Train test split
-X_train, X_test, y_train, y_test = train_test_split(X,
-                                                    y,
-                                                    stratify=y,
-                                                    test_size=0.2,
-                                                    random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, stratify=y, test_size=0.2, random_state=42
+)
 
 # Scaling
 scaler = StandardScaler()
