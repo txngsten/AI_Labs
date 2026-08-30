@@ -1,3 +1,10 @@
+"""
+Student Name: Oliver Wuttke
+Student FAN: WUTT0019
+File: question4.py
+Date: 30-08-2026
+Description: Logistic regression with class balancing on unbalanced wine dataset.
+"""
 
 import matplotlib.pyplot as plt
 

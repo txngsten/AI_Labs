@@ -1,3 +1,10 @@
+"""
+Student Name: Oliver Wuttke
+Student FAN: WUTT0019
+File: question3.py
+Date: 30-08-2026
+Description: Logistic regression with L1 regularization on Ionosphere dataset.
+"""
 
 import matplotlib.pyplot as plt
 

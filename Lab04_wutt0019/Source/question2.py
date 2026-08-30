@@ -1,3 +1,10 @@
+"""
+Student Name: Oliver Wuttke
+Student FAN: WUTT0019
+File: question2.py
+Date: 30-08-2026
+Description: Multi-class logistic regression on iris dataset with cross-validation scoring.
+"""
 
 import numpy as np
 

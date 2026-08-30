@@ -1,4 +1,10 @@
-
+"""
+Student Name: Oliver Wuttke
+Student FAN: WUTT0019
+File: question5.py
+Date: 30-08-2026
+Description: Comparing different logistic regression solvers on MNIST dataset.
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt

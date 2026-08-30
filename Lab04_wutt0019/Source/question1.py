@@ -1,3 +1,11 @@
+"""
+Student Name: Oliver Wuttke
+Student FAN: WUTT0019
+File: question1.py
+Date: 30-08-2026
+Description: Simple logistic regression on car evaluation dataset.
+"""
+
 import pandas as pd
 
 from ucimlrepo import fetch_ucirepo
