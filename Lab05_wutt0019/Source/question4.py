@@ -3,9 +3,10 @@ Student Name: Oliver Wuttke
 Student FAN: WUTT0019
 File: question4.py
 Date: 07-09-2026
-Description:
+Description: Computing MSE, MAE, and RMSE on for decision tree regressor on the California housing dataset.
 """
-import numpy as np
+
+
 from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor

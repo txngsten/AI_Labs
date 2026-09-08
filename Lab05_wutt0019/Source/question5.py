@@ -2,8 +2,8 @@
 Student Name: Oliver Wuttke
 Student FAN: WUTT0019
 File: question5.py
-Date: 07-09-2026
-Description:
+Date: 08-09-2026
+Description: Comparing a fully fitted decision tree regressor and a optimally pruned one on the California housing dataset.
 """
 import numpy as np
 from sklearn.datasets import fetch_california_housing
