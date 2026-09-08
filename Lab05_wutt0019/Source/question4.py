@@ -6,7 +6,6 @@ Date: 07-09-2026
 Description: Computing MSE, MAE, and RMSE on for decision tree regressor on the California housing dataset.
 """
 
-
 from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor

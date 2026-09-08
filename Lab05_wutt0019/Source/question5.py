@@ -5,6 +5,7 @@ File: question5.py
 Date: 08-09-2026
 Description: Comparing a fully fitted decision tree regressor and a optimally pruned one on the California housing dataset.
 """
+
 import numpy as np
 from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split, GridSearchCV
