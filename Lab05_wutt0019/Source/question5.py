@@ -80,7 +80,7 @@ y_pred_pruned_val = pruned.predict(X_val)
 
 # Compute and print metrics, on validation set
 print('\n=== Validation Set Metrics ===')
-compute_and_print(y_val, y_pred_pruned, y_pred_full)
+compute_and_print(y_val, y_pred_pruned_val, y_pred_full_val)
 
 
 
