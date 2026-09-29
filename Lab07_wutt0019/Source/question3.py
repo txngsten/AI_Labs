@@ -34,8 +34,11 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Scale data
 scaler = StandardScaler()
+y_scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
+y_train_scaled = y_scaler.fit_transform(y_train.reshape(-1, 1)).ravel()
+y_test_scaled = y_scaler.transform(y_test.reshape(-1, 1)).ravel()
 
 # Training models with different optimizers
 results = {}
@@ -48,7 +51,7 @@ for solver in solvers:
         solver=solver,
         max_iter=10000,
         random_state=42
-    ).fit(X_train_scaled, y_train)
+    ).fit(X_train_scaled, y_train_scaled)
 
     # Make predictions
     results[solver] = mlp.predict(X_test_scaled)
@@ -56,8 +59,8 @@ for solver in solvers:
 # Compute metrics
 for solver in solvers:
     print(f'=== Results for {solver} solver ===')
-    print('MAE:', mean_absolute_error(y_test, results[solver]))
-    print('RMSE:', root_mean_squared_error(y_test, results[solver]))
+    print('MAE:', mean_absolute_error(y_test_scaled, results[solver]))
+    print('RMSE:', root_mean_squared_error(y_test_scaled, results[solver]))
 
 # Plot results
 plt.figure(figsize=(10, 5))
