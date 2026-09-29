@@ -62,7 +62,6 @@ print('MAE:', mean_absolute_error(y_test, y_pred_300))
 print('RMSE:', root_mean_squared_error(y_test, y_pred_300))
 
 # Plot results
-# Plotting
 plt.figure(figsize=(10, 5))
 plt.plot(X_train, y_train, '-b', label='Training Data')
 plt.plot(X_test, y_test, '-r', label='Test Data')
