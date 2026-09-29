@@ -1,7 +1,7 @@
 """
 Student Name: Oliver Wuttke
 Student FAN: WUTT0019
-File: questions3.py
+File: question3.py
 Date: 29-09-2026
 Description: Fitting MLP models with different solvers/optimizers.
 """

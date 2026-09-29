@@ -1,7 +1,7 @@
 """
 Student Name: Oliver Wuttke
 Student FAN: WUTT0019
-File: questions4.py
+File: question4.py
 Date: 29-09-2026
 Description: Fitting MLP models with GridSearchCV across model hyperparameters.
 """

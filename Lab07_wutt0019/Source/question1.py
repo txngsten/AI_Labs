@@ -1,7 +1,7 @@
 """
 Student Name: Oliver Wuttke
 Student FAN: WUTT0019
-File: questions1.py
+File: question1.py
 Date: 25-09-2026
 Description: Sunspot data predictions with MLP models with different number of hidden layers.
 """
