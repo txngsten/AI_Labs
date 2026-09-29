@@ -3,7 +3,7 @@ Student Name: Oliver Wuttke
 Student FAN: WUTT0019
 File: questions2.py
 Date: 29-09-2026
-Description:
+Description: Fitting MLP models with different number of neurons per layer.
 """
 
 # Imports
