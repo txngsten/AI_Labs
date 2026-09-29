@@ -36,14 +36,16 @@ mlp_1_hidden = MLPRegressor(
     hidden_layer_sizes=(50,),
     activation='relu',
     solver='adam',
-    max_iter=10000
+    max_iter=10000,
+    random_state=42
 ).fit(X_train, y_train)
 
 mlp_5_hidden = MLPRegressor(
     hidden_layer_sizes=(50, 50, 50, 50, 50),
     activation='relu',
     solver='adam',
-    max_iter=10000
+    max_iter=10000,
+    random_state=42
 ).fit(X_train, y_train)
 
 # Evaluate model performance
