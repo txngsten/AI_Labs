@@ -34,9 +34,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Scale data
 scaler = StandardScaler()
-y_scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
+
+y_scaler = StandardScaler()
 y_train_scaled = y_scaler.fit_transform(y_train.reshape(-1, 1)).ravel()
 y_test_scaled = y_scaler.transform(y_test.reshape(-1, 1)).ravel()
 
@@ -68,7 +69,7 @@ plt.plot(X_train, y_train, '-b', label='Training Data')
 plt.plot(X_test, y_test, '-r', label='Test Data')
 plt.plot(X_test, results['lbfgs'], '-g', label='MLP with LBFGS Solver')
 plt.plot(X_test, results['sgd'], '-y', label='MLP with Stochastic Gradient Descent Solver')
-plt.plot(X_test, results['adam'], '-y', label='MLP with Adam Solver')
+plt.plot(X_test, results['adam'], '-m', label='MLP with Adam Solver')
 plt.legend()
 plt.title('Training and Test Data with MLP Predictions')
 plt.xlabel('Months')

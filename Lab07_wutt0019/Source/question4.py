@@ -33,11 +33,11 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Scale data
 scaler = StandardScaler()
-y_scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
+
+y_scaler = StandardScaler()
 y_train_scaled = y_scaler.fit_transform(y_train.reshape(-1, 1)).ravel()
-y_test_scaled = y_scaler.transform(y_test.reshape(-1, 1)).ravel()
 
 # Fit the unoptimized MLP model
 mlp_unoptimized = MLPRegressor(
@@ -74,11 +74,15 @@ print(mlp_optimized.best_params_)
 y_pred_unoptimized = mlp_unoptimized.predict(X_test_scaled)
 y_pred_optimized = mlp_optimized.predict(X_test_scaled)
 
+# Inverse transform
+y_pred_unoptimized = y_scaler.inverse_transform(y_pred_unoptimized.reshape(-1, 1)).ravel()
+y_pred_optimized = y_scaler.inverse_transform(y_pred_optimized.reshape(-1, 1)).ravel()
+
 # Compute and print metrics
 print('=== Unoptimized MLP Model ===')
-print('MAE:', mean_absolute_error(y_test_scaled, y_pred_unoptimized))
-print('RMSE:', root_mean_squared_error(y_test_scaled, y_pred_unoptimized))
+print('MAE:', mean_absolute_error(y_test, y_pred_unoptimized))
+print('RMSE:', root_mean_squared_error(y_test, y_pred_unoptimized))
 
 print('\n=== Optimized MLP Model ===')
-print('MAE:', mean_absolute_error(y_test_scaled, y_pred_optimized))
-print('RMSE:', root_mean_squared_error(y_test_scaled, y_pred_optimized))
+print('MAE:', mean_absolute_error(y_test, y_pred_optimized))
+print('RMSE:', root_mean_squared_error(y_test, y_pred_optimized))
