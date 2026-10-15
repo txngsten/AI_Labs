@@ -11,6 +11,9 @@ noun_phrase --> determiner, adjective, noun.
 verb_phrase --> verb, noun_phrase.
 verb_phrase --> verb.
 
+% Prepositional phrase structure
+prepositional_phrase --> preposition, noun_phrase.
+
 % Lexicon
 determiner --> [the].
 determiner --> [a].
@@ -22,3 +25,6 @@ adjective --> [small].
 verb --> [chases].
 verb --> [sees].
 verb --> [likes].
+preposition --> [on].
+preposition --> [with].
+preposition --> [under].
