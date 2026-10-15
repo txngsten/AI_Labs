@@ -8,7 +8,7 @@ noun_phrase --> determiner, noun.
 noun_phrase --> determiner, adjective, noun.
 
 % Verb phrase structure
-verb_phrase --> verb, noun_phrase.
+verb_phrase --> verb, prepositional_phrase, noun_phrase.
 verb_phrase --> verb.
 
 % Prepositional phrase structure
