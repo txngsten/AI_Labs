@@ -1,7 +1,7 @@
 % grammar.pl - Knowledge base for simple English sentences using CFG
 
 % Sentence structure
-sentence --> noun_phrase, verb_phrase.
+sentence --> prepositional_phrase, noun_phrase, verb_phrase.
 
 % Noun phrase structure
 noun_phrase --> determiner, noun.
