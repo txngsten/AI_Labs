@@ -1,3 +1,11 @@
+/**
+    Student Name: Oliver Wuttke
+    Student FAN: WUTT0019
+    File: grammar.pl
+    Date: 15-10-2026
+    Description: Knowledge base for context-free grammar for lab 9.
+*/
+
 % grammar.pl - Knowledge base for simple English sentences using CFG
 
 % Sentence structure

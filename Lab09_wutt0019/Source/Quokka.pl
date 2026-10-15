@@ -1,3 +1,11 @@
+/**
+    Student Name: Oliver Wuttke
+    Student FAN: WUTT0019
+    File: Quokka.pl
+    Date: 15-10-2026
+    Description: Knowledge base for Quokka bus network.
+*/
+
 % Facts for travel times between cities
 travel_time(adelaide, darwin, 44).
 travel_time(adelaide, canberra, 22).
