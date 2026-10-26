@@ -3,7 +3,7 @@
     Student FAN: WUTT0019
     File: traffic.pl
     Date: 26-10-2026
-    Description: Knowledge base for traffic lab 10.
+    Description: Knowledge base for traffic conditions lab 10.
 */
 
 % Facts about traffic patterns
