@@ -9,24 +9,29 @@
 % Facts about running conditions
 good_ground(dry).
 good_weather(cloudy).
-max_temp(20).        % temperature must be below this
-min_sleep(8).        % hours of sleep must be at least this
+max_temp(20).
+min_sleep(8).
+dangerous_weather(storm).
 
 % Condition checks
 good_sleep(Sleep) :- min_sleep(Min), Sleep >= Min.
-good_temp(Temp)   :- max_temp(Max), Temp < Max.halt
+good_temp(Temp) :- max_temp(Max), Temp < Max.
+tired(Sleep) :- \+ good_sleep(Sleep).
+safe_weather(Weather) :- \+ dangerous_weather(Weather).
 
 % Decide to run or not with reasoning
 go_for_run(Ground, Temp, Sleep, Weather) :-
-    if_then_else(good_sleep(Sleep),
-        if_then_else(good_temp(Temp),
-            if_then_else(good_ground(Ground),
-                writeln('Go for a run'),
-                writeln('Ground isn''t dry, don''t run')),
-            if_then_else(good_weather(Weather),
-                writeln('Go for a run, but it is a bit hot'),
-                writeln('It''s too hot and the weather isn''t optimal, don''t run'))),
-        writeln('Haven''t slept enough, don''t run')).
+    if_then_else(tired(Sleep),
+        writeln('Have not slept enough, do not run'),
+        if_then_else(safe_weather(Weather),
+            if_then_else(good_temp(Temp),
+                if_then_else(good_ground(Ground),
+                    writeln('Go for a run'),
+                    writeln('Ground is not dry, do not run')),
+                if_then_else(good_weather(Weather),
+                    writeln('Go for a run, but it is a bit hot'),
+                    writeln('It is too hot and the weather is not optimal, do not run'))),
+            writeln('Weather is dangerous, do not run'))).
 
 % Question 3 - Allows procedural style if-then-else statements
 if_then_else(Cond, Then, Else) :- (Cond -> Then; Else).
