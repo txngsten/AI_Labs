@@ -9,6 +9,7 @@
 % Facts about running conditions
 good_ground(dry).
 good_weather(cloudy).
+good_weather(sunny).
 max_temp(20).
 min_sleep(8).
 dangerous_weather(storm).
