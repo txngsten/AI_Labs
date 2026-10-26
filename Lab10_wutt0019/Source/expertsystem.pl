@@ -34,5 +34,5 @@ go_for_run(Ground, Temp, Sleep, Weather) :-
                     writeln('It is too hot and the weather is not optimal, do not run'))),
             writeln('Weather is dangerous, do not run'))).
 
-% Question 3 - Allows procedural style if-then-else statements
+% Challenge Question - Allows procedural style if-then-else statements
 if_then_else(Cond, Then, Else) :- (Cond -> Then; Else).
